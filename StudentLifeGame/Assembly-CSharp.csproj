@@ -60,7 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\LevelManager\BiomeGenerator.cs" />
+    <Compile Include="Assets\Scripts\Manager\Level\LevelManager.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Connor/source/repos/Group-Project-LevelGen/StudentLifeGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
