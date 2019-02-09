@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class LevelManager : MonoBehaviour
 {
     private Vector3 vCurChunkPosition = new Vector3();
+    private List<GameObject> loadedChunks = new List<GameObject>();
+    private GameObject curTrigger;
 
     [Header("Core")]
     public float Stride = 1.6f;
@@ -43,7 +46,8 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-
+        if (curTrigger.GetComponent<TriggerManager>().IsCollidingWithPlayer)
+            LoadNextChunk();
     }
 
     private void FixedUpdate()
@@ -54,7 +58,7 @@ public class LevelManager : MonoBehaviour
     private void LoadNextChunk()
     {
         GameObject gChunkDummy = Instantiate(new GameObject(), vCurChunkPosition, Quaternion.identity, gameObject.transform);
-        gChunkDummy.name = "Chuck";
+        gChunkDummy.name = "Chunk";
 
         //start at the generators position.
         Vector3 vPos = gChunkDummy.transform.position;
@@ -89,12 +93,26 @@ public class LevelManager : MonoBehaviour
             }
 
             //instantiate trigger.
-            if(iTriggerPos == i)
-                Instantiate(TriggerLoader, vPos, Quaternion.identity, transform);
+            if (iTriggerPos == i)
+            {
+                //delete the old trigger, create a new one.
+                Destroy(curTrigger);
+                curTrigger = Instantiate(TriggerLoader, vPos, Quaternion.identity, transform);
+            }
 
             vPos.x += 1.6f;
         }
 
         vCurChunkPosition = vPos;
+        loadedChunks.Add(gChunkDummy);
+
+        if (loadedChunks.Count == 3)
+            DeleteOldChunk();
+    }
+
+    private void DeleteOldChunk()
+    {
+        Destroy(loadedChunks[0]);
+        loadedChunks.RemoveAt(0);
     }
 }
