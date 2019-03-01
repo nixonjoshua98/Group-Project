@@ -1,13 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+//[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerDebug : MonoBehaviour
 {
+    private Rigidbody2D rb2d;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb2d = GetComponent<Rigidbody2D>();
+        Debug.Assert(rb2d == null, "No RigidBody2d Located!");
     }
 
     // Update is called once per frame
@@ -20,7 +22,7 @@ public class PlayerDebug : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
             position.x -= 0.1f;
         if (Input.GetKey(KeyCode.Space))
-            position.y += 0.5f;
+            rb2d.AddForce(new Vector2(0, 1)*20, ForceMode2D.Force);
 
         transform.position = position;
     }

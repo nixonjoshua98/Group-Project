@@ -14,7 +14,7 @@ public class LevelManager : MonoBehaviour
     public int Length = 32;
     public GameObject TriggerLoader;
 
-    [Header("Gaps")]
+    [Header("Gaps In Floor")]
     public bool AllowGaps = false;
     [Range(0, 100)]
     public int GapsFactor = 10;
@@ -23,6 +23,17 @@ public class LevelManager : MonoBehaviour
     public bool AllowObstacles = false;
     [Range(0, 100)]
     public int ObstacleFactor = 80;
+
+    [Header("Platform")]
+    public bool AllowPlatform = false;
+    [Range(0, 100)]
+    public int PlatformSpawnChance = 50;
+    public int yOffset = 4;
+    [Range(0, 32)]
+    public int xOffset = 16; 
+    [Range(3, 10)]
+    public int PlatformLength = 6;
+
 
     [Header("GameObjects")]
     public GameObject[] FloorPrefabs;
@@ -40,6 +51,7 @@ public class LevelManager : MonoBehaviour
         Debug.Assert(FloorPrefabs.Length != 0, "Need to assign 'FloorPrefabs' to the LevelManager!");
         Debug.Assert(ObstaclePrefabs.Length != 0, "Need to assign 'ObstaclePrefabs' to the LevelManager!");
         Debug.Assert(TriggerLoader != null, "Need to assign 'TriggerLoader' to the LevelManager!");
+
         LoadNextChunk();
     }
 
@@ -63,12 +75,14 @@ public class LevelManager : MonoBehaviour
         //start at the generators position.
         Vector3 vPos = gChunkDummy.transform.position;
         int iTriggerPos = Length / 2;
+        bool bSpawnPlatform = (Random.Range(0, 100) > PlatformSpawnChance ? true : false);
 
         for (int i = 0; i != Length; i++)
         {
             //so we can detect if this block is a gap or not.
             bool bIsGap = false;
 
+            #region Gap Instantiation
             //check if gaps are allowed.
             if (AllowGaps)
             {
@@ -78,7 +92,9 @@ public class LevelManager : MonoBehaviour
                 if (bInstantiate)
                     Instantiate(FloorPrefabs[Random.Range(0, FloorPrefabs.Length)], vPos, Quaternion.identity, gChunkDummy.transform);
             }
+            #endregion
 
+            #region Obstacle Instantion
             //check if obstacles are allowed and if this block is not a gap.
             if (AllowObstacles && !bIsGap)
             {
@@ -91,6 +107,11 @@ public class LevelManager : MonoBehaviour
                     Instantiate(ObstaclePrefabs[Random.Range(0, ObstaclePrefabs.Length)], vObstaclePos, Quaternion.identity, gChunkDummy.transform);
                 }
             }
+            #endregion
+
+
+
+
 
             //instantiate trigger.
             if (iTriggerPos == i)
@@ -112,6 +133,7 @@ public class LevelManager : MonoBehaviour
 
     private void DeleteOldChunk()
     {
+        //clean up unused chunks.
         Destroy(loadedChunks[0]);
         loadedChunks.RemoveAt(0);
     }
