@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float speed = 10f;
+    //public float speed = 10f;
     public float jumpforce = 10f;
-    public float jumpCD = 2f;
-
-    private float nextJumpTime = 0;
+    public float FM = 5f;
+    public float LJM= -4f;
 
     private Rigidbody2D myRB;
 
@@ -24,12 +23,25 @@ public class Movement : MonoBehaviour
         // defult map to arrow keys 
         // The value is in the range -1 to 1
         float vert = Input.GetAxis("Vertical") * jumpforce;
-        float hori = Input.GetAxis("Horizontal") * speed;
+        if (vert > 0)
+        {
+            myRB.velocity = Vector2.up * jumpforce;
+        }
+        //float hori = Input.GetAxis("Horizontal") * speed;
 
         //per second movement insetad of frame
         vert *= Time.deltaTime;
-        hori *= Time.deltaTime;
-        transform.Translate(hori, vert, 0);
+        //hori *= Time.deltaTime;
+        //transform.Translate(0, vert, 0);
+         if (myRB.velocity.y < 0)
+        {
+            myRB.velocity += Vector2.up * Physics2D.gravity.y * (FM - 1) * Time.deltaTime;
+        }
+         else if (myRB.velocity.y >0 && vert < 5)
+        {
+            myRB.velocity += Vector2.up * Physics2D.gravity.y * (LJM - 1) * Time.deltaTime;
+        }
+
 
     }
 }
