@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Manager\Level\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\Level\LevelManager_old.cs" />
     <Compile Include="Assets\Scripts\Manager\Level\PlayerDebug.cs" />
     <Compile Include="Assets\Scripts\Manager\Level\TriggerManager.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
