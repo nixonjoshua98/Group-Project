@@ -5,11 +5,11 @@ using UnityEngine;
 public class NewMovement : MonoBehaviour
 {
 
-    public float FM; //Fall Multiplier
-    public float LJM; // Low Jump Multiplier
+    //public float FM; //Fall Multiplier
+    //public float LJM; // Low Jump Multiplier
 
-    //Grabing rb obv
-    Rigidbody2D myRB;
+    ////Grabing rb obv
+    //Rigidbody2D myRB;
 
     public float JF; // Jump Force
     public float CD = 1; // Cooldown
@@ -18,28 +18,28 @@ public class NewMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //slapping it awake
-        myRB = GetComponent<Rigidbody2D>();
+        ////slapping it awake
+        //myRB = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Code for Movement
-        if (myRB.velocity.y > 0 && !Input.GetKey(KeyCode.W))
-        {
-            myRB.velocity += Vector2.up * Physics2D.gravity.y * (LJM - 1) * Time.deltaTime;
-        }
+        ////Code for Movement
+        //if (myRB.velocity.y > 0 && !Input.GetKey(KeyCode.W))
+        //{
+        //    myRB.velocity += Vector2.up * Physics2D.gravity.y * (LJM - 1) * Time.deltaTime;
+        //}
 
-        if (myRB.velocity.y > 0 && !Input.GetKey(KeyCode.UpArrow))
-        {
-            myRB.velocity += Vector2.up * Physics2D.gravity.y * (LJM - 1) * Time.deltaTime;
-        }
+        //if (myRB.velocity.y > 0 && !Input.GetKey(KeyCode.UpArrow))
+        //{
+        //    myRB.velocity += Vector2.up * Physics2D.gravity.y * (LJM - 1) * Time.deltaTime;
+        //}
 
-        else if (myRB.velocity.y < 0)
-        {
-            myRB.velocity += Vector2.up * Physics2D.gravity.y * (FM - 1) * Time.deltaTime;
-        }
+        //else if (myRB.velocity.y < 0)
+        //{
+        //    myRB.velocity += Vector2.up * Physics2D.gravity.y * (FM - 1) * Time.deltaTime;
+        //}
 
 
         // player 1 (ie analog stick for arcade machine)
