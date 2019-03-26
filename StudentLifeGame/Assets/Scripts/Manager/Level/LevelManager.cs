@@ -17,7 +17,7 @@ public class LevelManager : MonoBehaviour
     [Header("GameObjects")]
     public GameObject[] ChunkPrefabs;
 
-    private void Start()
+    private void Awake()
     {
         LoadNextChunk();
     }
