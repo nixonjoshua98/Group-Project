@@ -1,9 +1,9 @@
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild/
-[Bb]uilds/
-[Ll]ogs/
+StudentLifeGame/[Ll]ibrary/
+StudentLifeGame/[Tt]emp/
+StudentLifeGame/[Oo]bj/
+StudentLifeGame/[Bb]uild/
+StudentLifeGame/[Bb]uilds/
+StudentLifeGame/[Ll]ogs/
 
 # Never ignore Asset meta data
 ![Aa]ssets/**/*.meta
