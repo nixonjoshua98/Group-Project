@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour
     private void Update()
     {
         if (curTrigger.GetComponent<TriggerManager>().IsCollidingWithPlayer)
-            LoadNextChunk(Random.Range(0, ChunkPrefabs.Length));
+            LoadNextChunk(Random.Range(1, ChunkPrefabs.Length));
     }
 
     private void LoadNextChunk(int forcedChunkIdx)
