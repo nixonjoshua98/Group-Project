@@ -52,9 +52,20 @@ public class PlayerEnergy : MonoBehaviour
 		currentEnergy -= (Time.fixedDeltaTime * energyLostSecond);  // Independant of FPS
 	}
 
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("Energy"))
+        {
+            Destroy(col.gameObject);
+            
+            currentEnergy += 50;
 
-	/* - - - - HELPER METHODS - - - - */
-	public bool HasEnergy() { return currentEnergy > 0; }
+
+        }
+    }
+
+    /* - - - - HELPER METHODS - - - - */
+    public bool HasEnergy() { return currentEnergy > 0; }
 	public bool OutOfEnergy() { return !HasEnergy(); }
 	public float GetFloatEnergy() { return currentEnergy; }
 	public int GetIntEnergy() { return Mathf.CeilToInt(currentEnergy); }

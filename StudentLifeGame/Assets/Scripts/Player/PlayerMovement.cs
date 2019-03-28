@@ -19,10 +19,12 @@ public class PlayerMovement : MonoBehaviour
     private float jumpTimer = 0.0f;
     private bool playerCanJump = false;
     private bool currentlyJumping = false;
+   
 
 
     /* - - - - PUBLIC ACCESSORS - - - - */
     public bool isHoldingJump { get { return Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W); } }
+
 
 
     private void Update()
@@ -77,4 +79,5 @@ public class PlayerMovement : MonoBehaviour
             currentlyJumping = false;
         }
     }
+
 }
