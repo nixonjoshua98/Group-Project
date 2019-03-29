@@ -19,7 +19,6 @@ ExportedObj/
 *.userprefs
 *.pidb
 *.booproj
-*.meta
 *.svd
 *.pdb
 *.mdb
@@ -33,7 +32,6 @@ sysinfo.txt
 *.unitypackage
 crashlytics-build.properties
 
-/StudentLifeGame/Library/metadata/
 /StudentLifeGame/Library/PackageCache/
 /StudentLifeGame/Library/metadata/
 /StudentLifeGame/.vs/
