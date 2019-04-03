@@ -38,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
             Jump();
 
         Move();
+        anim.SetBool("Jump", currentlyJumping);
+
 
     }
 
