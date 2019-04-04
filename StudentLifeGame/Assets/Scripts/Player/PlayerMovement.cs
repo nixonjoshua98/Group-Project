@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     /* - - - - COMPONENTS - - - - */
     public Rigidbody2D rb;
+    public Animator anim;
 
 
     /* - - - - PRIVATES - - - - */
@@ -37,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
             Jump();
 
         Move();
+        anim.SetBool("Jump", currentlyJumping);
+
 
     }
 
