@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     /* - - - - COMPONENTS - - - - */
     public Rigidbody2D rb;
+    public Animator anim;
 
 
     /* - - - - PRIVATES - - - - */
@@ -25,9 +26,11 @@ public class PlayerMovement : MonoBehaviour
     public bool isHoldingJump { get { return Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W); } }
 
 
-    private void FixedUpdate()
+    private void Update()
     {
         jumpTimer += Time.deltaTime;
+
+        anim.SetBool("Jump", currentlyJumping);
 
         if (jumpTimer >= cooldown)
             playerCanJump = true;
@@ -37,7 +40,6 @@ public class PlayerMovement : MonoBehaviour
             Jump();
 
         Move();
-
     }
 
 
@@ -55,9 +57,6 @@ public class PlayerMovement : MonoBehaviour
 
 
         rb.velocity = Vector2.up * jumpForce;
-
-
-        Debug.Log("Player jumped");
     }
 
 
