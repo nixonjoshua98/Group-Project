@@ -838,8 +838,8 @@ MonoBehaviour:
   TriggerLoader: {fileID: 8545964519353681053, guid: 499e697cfc4704d46a8472f84b0a5a30,
     type: 3}
   MaxLoadedChunks: 4
-  TriggerOffset: 10
-  MaxBlocksPerChunk: 40
+  TriggerOffset: 32
+  MaxBlocksPerChunk: 64
   ChunkPrefabs:
   - {fileID: 8578997479794366065, guid: 53862843667eadb4e9ac6318890bb983, type: 3}
   - {fileID: 761343373600030800, guid: a674fe455f803e54db4fa78bfdfa9ea8, type: 3}
