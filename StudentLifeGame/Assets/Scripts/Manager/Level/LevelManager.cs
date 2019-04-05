@@ -33,8 +33,8 @@ public class LevelManager : MonoBehaviour
         GameObject selectedChunk = ChunkPrefabs[forcedChunkIdx];
         GameObject loadedChunk = Instantiate(selectedChunk, vCurChunkPosition, Quaternion.identity) as GameObject;
         loadedChunks.Add(loadedChunk);
-        Vector3 vPos = vCurChunkPosition + new Vector3(0.16f * MaxBlocksPerChunk, 0, 0);
-        Vector3 vTrigger = vCurChunkPosition + new Vector3(0.16f * TriggerOffset, 0, 0);
+        Vector3 vPos = vCurChunkPosition + new Vector3(0.25f * MaxBlocksPerChunk, 0, 0);
+        Vector3 vTrigger = vCurChunkPosition + new Vector3(0.25f * TriggerOffset, 0, 0);
         curTrigger = Instantiate(TriggerLoader, vTrigger, Quaternion.identity, loadedChunk.transform);
         vCurChunkPosition = vPos;
 
