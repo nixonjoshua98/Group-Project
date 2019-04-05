@@ -690,50 +690,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8157776911969122615}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1725765624 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1725765625, guid: f07013a82a217e3419d98e7a85d4cfd9,
-    type: 3}
-  m_PrefabInstance: {fileID: 8157776911969122615}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725765623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d25949c6fbc0799428711e64ee4d3538, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1725765625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725765623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b38e2bbbb46cab340a279735ee1c4d9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerScore: {fileID: 1725765624}
-  playerEnergy: {fileID: 1725765631}
 --- !u!95 &1725765630 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1725765630, guid: f07013a82a217e3419d98e7a85d4cfd9,
     type: 3}
   m_PrefabInstance: {fileID: 8157776911969122615}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1725765631 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1725765624, guid: f07013a82a217e3419d98e7a85d4cfd9,
-    type: 3}
-  m_PrefabInstance: {fileID: 8157776911969122615}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725765623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 119c9e0266f95b84484b0ecad6efa7bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1836821815
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,6 +860,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1725765625, guid: f07013a82a217e3419d98e7a85d4cfd9, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 386313446}
+    - target: {fileID: 1725765624, guid: f07013a82a217e3419d98e7a85d4cfd9, type: 3}
+      propertyPath: energySlider
+      value: 
+      objectReference: {fileID: 76705909}
     - target: {fileID: 8157776912527158989, guid: f07013a82a217e3419d98e7a85d4cfd9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -958,23 +928,9 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 1725765630}
-    - target: {fileID: 8157776912527158987, guid: f07013a82a217e3419d98e7a85d4cfd9,
-        type: 3}
-      propertyPath: jumpMultiplier
+    - target: {fileID: 442502329, guid: f07013a82a217e3419d98e7a85d4cfd9, type: 3}
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8157776912527158987, guid: f07013a82a217e3419d98e7a85d4cfd9,
-        type: 3}
-      propertyPath: jumpForce
-      value: 4.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1725765624, guid: f07013a82a217e3419d98e7a85d4cfd9, type: 3}
-      propertyPath: energySlider
-      value: 
-      objectReference: {fileID: 76705909}
-    - target: {fileID: 1725765625, guid: f07013a82a217e3419d98e7a85d4cfd9, type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 386313446}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f07013a82a217e3419d98e7a85d4cfd9, type: 3}
