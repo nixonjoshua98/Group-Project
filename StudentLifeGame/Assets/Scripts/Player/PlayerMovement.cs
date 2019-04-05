@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     {
         jumpTimer += Time.deltaTime;
 
+        anim.SetBool("Jump", currentlyJumping);
+
         if (jumpTimer >= cooldown)
             playerCanJump = true;
 
@@ -38,9 +40,6 @@ public class PlayerMovement : MonoBehaviour
             Jump();
 
         Move();
-        anim.SetBool("Jump", currentlyJumping);
-
-
     }
 
 
@@ -58,9 +57,6 @@ public class PlayerMovement : MonoBehaviour
 
 
         rb.velocity = Vector2.up * jumpForce;
-
-
-        Debug.Log("Player jumped");
     }
 
 
