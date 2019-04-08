@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Functions : MonoBehaviour
 {
+    
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void QuitGame()
@@ -15,4 +16,5 @@ public class NewBehaviourScript : MonoBehaviour
         Debug.Log("Quit");
         Application.Quit();
     }
+
 }
