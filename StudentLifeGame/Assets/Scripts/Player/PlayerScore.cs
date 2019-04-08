@@ -8,7 +8,7 @@ public class PlayerScore : MonoBehaviour
     [Header("GameObjects"), SerializeField]
     Text scoreText;
 
-    private float score;
+    public float score;
 
     private void Start()
     {
