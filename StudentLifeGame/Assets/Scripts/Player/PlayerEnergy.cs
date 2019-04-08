@@ -21,6 +21,8 @@ public class PlayerEnergy : MonoBehaviour
 	/* - - - - INSPECTOR GAMEOBJECTS - - - - */
 	[SerializeField]
 	Slider energySlider;
+    [SerializeField]
+    Text energyText;
 
 
 	/* - - - - ACCESS RESTRICTIONS - - - - */
