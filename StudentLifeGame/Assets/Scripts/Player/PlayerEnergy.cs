@@ -21,6 +21,8 @@ public class PlayerEnergy : MonoBehaviour
 	/* - - - - INSPECTOR GAMEOBJECTS - - - - */
 	[SerializeField]
 	Slider energySlider;
+    [SerializeField]
+    Text energyText;
 
 
 	/* - - - - ACCESS RESTRICTIONS - - - - */
@@ -43,6 +45,7 @@ public class PlayerEnergy : MonoBehaviour
 		UpdateEnergy();
 
 		energySlider.value = GetIntEnergy();
+        energyText.text = GetIntEnergy().ToString();
 	}
 
 
