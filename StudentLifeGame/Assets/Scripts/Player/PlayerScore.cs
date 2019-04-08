@@ -17,6 +17,8 @@ public class PlayerScore : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.instance.state != GameManager.GameState.ACTIVE) return;
+
         score += (Time.deltaTime * 2.5f);
 
 
