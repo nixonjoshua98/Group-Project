@@ -56,7 +56,7 @@ public class PlayerEnergy : MonoBehaviour
 	// Deducts the natural energy lost over time
 	private void UpdateEnergy()
 	{
-		currentEnergy -= (Time.fixedDeltaTime * energyLostSecond * 10);  // Independant of FPS
+		currentEnergy -= (Time.fixedDeltaTime * energyLostSecond);  // Independant of FPS
 	}
 
 
