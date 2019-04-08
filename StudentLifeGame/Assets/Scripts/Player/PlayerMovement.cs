@@ -28,6 +28,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.instance.state != GameManager.GameState.ACTIVE)
+        {
+            currentlyJumping = false;
+            anim.SetBool("Jump", currentlyJumping);
+            if (GameManager.instance.state == GameManager.GameState.POST)
+                anim.speed = 0.0f;
+            rb.velocity = new Vector2(0.0f, rb.velocity.y);
+            return;
+        }
+
+
         jumpTimer += Time.deltaTime;
 
         anim.SetBool("Jump", currentlyJumping);

@@ -40,7 +40,14 @@ public class PlayerEnergy : MonoBehaviour
 	// Called every fixed period of time
 	public void FixedUpdate()
 	{
-		UpdateEnergy();
+        if (GameManager.instance.state != GameManager.GameState.ACTIVE) return;
+
+        if (OutOfEnergy())
+        {
+            GameManager.instance.state = GameManager.GameState.POST;
+        }
+
+        UpdateEnergy();
 
 		energySlider.value = GetIntEnergy();
 	}
@@ -49,12 +56,12 @@ public class PlayerEnergy : MonoBehaviour
 	// Deducts the natural energy lost over time
 	private void UpdateEnergy()
 	{
-		currentEnergy -= (Time.fixedDeltaTime * energyLostSecond);  // Independant of FPS
+		currentEnergy -= (Time.fixedDeltaTime * energyLostSecond * 10);  // Independant of FPS
 	}
 
 
 	/* - - - - HELPER METHODS - - - - */
-	public bool HasEnergy() { return currentEnergy > 0; }
+	public bool HasEnergy() { return currentEnergy > 0.0f; }
 	public bool OutOfEnergy() { return !HasEnergy(); }
 	public float GetFloatEnergy() { return currentEnergy; }
 	public int GetIntEnergy() { return Mathf.CeilToInt(currentEnergy); }
