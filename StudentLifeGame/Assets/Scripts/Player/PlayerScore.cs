@@ -19,7 +19,7 @@ public class PlayerScore : MonoBehaviour
     {
         if (GameManager.instance.state != GameManager.GameState.ACTIVE) return;
 
-        score += (Time.deltaTime * 2.5f);
+        score += (Time.deltaTime * 2);
 
 
         scoreText.text = ((int)score).ToString();

@@ -13,12 +13,12 @@ public class PlayerPickup : MonoBehaviour
         if (collision.CompareTag("ScoreItem"))
         {
             Destroy(collision.gameObject);
-            playerScore.score += 10;
+            playerScore.score += 50;
         }
 
         else if (collision.CompareTag("EnergyItem"))
         {
-            playerEnergy.currentEnergy += 5;
+            playerEnergy.currentEnergy += 10;
             Destroy(collision.gameObject);
         }
     }
