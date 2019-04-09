@@ -32,11 +32,6 @@ sysinfo.txt
 *.unitypackage
 crashlytics-build.properties
 
-/StudentLifeGame/Library/PackageCache/
-/StudentLifeGame/Library/metadata/
+
 /StudentLifeGame/.vs/
-/StudentLifeGame/Library/ScriptAssemblies/
-/StudentLifeGame/Library/UnityAssemblies/
-/StudentLifeGame/Library/
-/StudentLifeGame/Library/PackageCache/
 /StudentLifeGame/Temp/
