@@ -52,6 +52,7 @@ public class PlayerEnergy : MonoBehaviour
         UpdateEnergy();
 
 		energySlider.value = GetIntEnergy();
+        energyText.text = GetIntEnergy().ToString();
 	}
 
 

@@ -1281,6 +1281,30 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8157776911969122615}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1725765625 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1725765625, guid: f07013a82a217e3419d98e7a85d4cfd9,
+    type: 3}
+  m_PrefabInstance: {fileID: 8157776911969122615}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725765623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25949c6fbc0799428711e64ee4d3538, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1725765626 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1725765624, guid: f07013a82a217e3419d98e7a85d4cfd9,
+    type: 3}
+  m_PrefabInstance: {fileID: 8157776911969122615}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725765623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 119c9e0266f95b84484b0ecad6efa7bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1725765630 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1725765630, guid: f07013a82a217e3419d98e7a85d4cfd9,
@@ -1753,5 +1777,15 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1008915257835755479, guid: f07013a82a217e3419d98e7a85d4cfd9,
+        type: 3}
+      propertyPath: playerEnergy
+      value: 
+      objectReference: {fileID: 1725765626}
+    - target: {fileID: 1008915257835755479, guid: f07013a82a217e3419d98e7a85d4cfd9,
+        type: 3}
+      propertyPath: playerScore
+      value: 
+      objectReference: {fileID: 1725765625}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f07013a82a217e3419d98e7a85d4cfd9, type: 3}
