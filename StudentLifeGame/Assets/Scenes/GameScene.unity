@@ -1340,7 +1340,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.5
+  orthographic size: 1.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1383,6 +1383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1725765623}
+  offset: {x: 1, y: 0.25, z: 0}
 --- !u!1 &1855623373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1738,6 +1739,16 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 1725765630}
+    - target: {fileID: 8157776912527158987, guid: f07013a82a217e3419d98e7a85d4cfd9,
+        type: 3}
+      propertyPath: jumpMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157776912527158987, guid: f07013a82a217e3419d98e7a85d4cfd9,
+        type: 3}
+      propertyPath: jumpForce
+      value: 4.75
+      objectReference: {fileID: 0}
     - target: {fileID: 442502329, guid: f07013a82a217e3419d98e7a85d4cfd9, type: 3}
       propertyPath: m_SortingOrder
       value: 1
