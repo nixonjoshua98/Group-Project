@@ -145,7 +145,7 @@ RectTransform:
   - {fileID: 1105264480}
   - {fileID: 1232126958}
   m_Father: {fileID: 1464623403}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -201,6 +201,12 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &197952974 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8157776912527158976, guid: f07013a82a217e3419d98e7a85d4cfd9,
+    type: 3}
+  m_PrefabInstance: {fileID: 8157776911969122615}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &351930389
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,16 +331,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386313444}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1464623403}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 200}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -50}
   m_SizeDelta: {x: 100, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &386313446
@@ -686,7 +692,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &862992498
 PrefabInstance:
@@ -1066,8 +1072,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 76705908}
   - {fileID: 386313445}
+  - {fileID: 76705908}
   - {fileID: 1855623374}
   - {fileID: 576094980}
   m_Father: {fileID: 0}
@@ -1275,12 +1281,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649276693}
   m_CullTransparentMesh: 0
---- !u!1 &1725765623 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8157776912527158976, guid: f07013a82a217e3419d98e7a85d4cfd9,
-    type: 3}
-  m_PrefabInstance: {fileID: 8157776911969122615}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1836821815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,7 +1362,7 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1836821819
 MonoBehaviour:
@@ -1376,7 +1376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b1121f39b2a554690e8c11ed1057e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1725765623}
+  player: {fileID: 197952974}
   offset: {x: 1, y: 0.25, z: 0}
 --- !u!1 &1855623373
 GameObject:
@@ -1605,7 +1605,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4582736451999805665
 GameObject:
@@ -1711,7 +1711,7 @@ PrefabInstance:
     - target: {fileID: 8157776912527158989, guid: f07013a82a217e3419d98e7a85d4cfd9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8157776912527158989, guid: f07013a82a217e3419d98e7a85d4cfd9,
         type: 3}
@@ -1751,7 +1751,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 8157776911969122615}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725765623}
+  m_GameObject: {fileID: 197952974}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d25949c6fbc0799428711e64ee4d3538, type: 3}
@@ -1763,7 +1763,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 8157776911969122615}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725765623}
+  m_GameObject: {fileID: 197952974}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 119c9e0266f95b84484b0ecad6efa7bf, type: 3}
