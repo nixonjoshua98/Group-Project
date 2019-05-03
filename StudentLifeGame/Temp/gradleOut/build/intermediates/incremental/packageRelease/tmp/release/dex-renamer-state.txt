@@ -1,0 +1,4 @@
+#Fri May 03 15:46:21 BST 2019
+base.0=C\:\\Users\\Joshua\\Documents\\Repos\\Group-Project\\StudentLifeGame\\Temp\\gradleOut\\build\\intermediates\\transforms\\dexMerger\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex

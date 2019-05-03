@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     /* - - - - PUBLIC ACCESSORS - - - - */
-    public bool isHoldingJump { get { return Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W); } }
+    public bool isHoldingJump { get { return Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W) || Input.touchCount > 0; } }
 
 
     private void Update()
